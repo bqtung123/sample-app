@@ -14,6 +14,7 @@ gem 'mysql2'
 gem 'bootstrap-sass', '3.4.1'
 gem 'rails-controller-testing'
 gem 'bcrypt', '~> 3.1.11'
+gem 'sprockets', '3.5.2'
 group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
@@ -34,7 +35,6 @@ end
 
 group :production do
   gem 'pg', '1.2.3'
-  gem 'puma',       '5.3.1'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

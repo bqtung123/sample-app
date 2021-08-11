@@ -7,7 +7,6 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  database: sample-app
   username: root
   password:
   host: 127.0.0.1
@@ -15,9 +14,12 @@ default: &default
 
 development:
    <<: *default
-   
+   database: sample-app
+
 test:
    <<: *default
-   
+   database: test-sample-app
+
 production:
    <<: *default
+   database: sample-app

@@ -14,7 +14,10 @@ gem 'mysql2'
 gem 'bootstrap-sass', '3.4.1'
 gem 'rails-controller-testing'
 gem 'bcrypt', '~> 3.1.11'
-gem 'sprockets', '3.5.2'
+gem 'sprockets', '~> 3.5', '>= 3.5.2'
+gem 'faker', '~> 1.6', '>= 1.6.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0'
 group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]

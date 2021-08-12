@@ -2,12 +2,12 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :destroy , :edit ,:update]
   before_action :correct_user, only: [:edit,:update]
   before_action :admin_user, only: :destroy
-
+   # not have store_location , not have forwarding url 
    def logged_in_user
       unless logged_in?
            store_location
            flash[:danger]="Please log in"
-           redirect_to login_url  # day la noi can sua can biet thong tin noi can chuyen den
+           redirect_to login_url 
       end
    end
 
@@ -36,9 +36,10 @@ class UsersController < ApplicationController
   def create 
       @user=User.new(user_params)
       if @user.save
-        log_in @user
-        flash[:success]= "Welcome to the Sample App!"
-        redirect_to user_url(@user)
+        # send_activation_email_method
+        @user.send_activation_email
+        flash[:info] = "Please check your email to activate your account."
+        redirect_to root_url
       else
         render 'new'
       end

@@ -18,6 +18,10 @@ gem 'sprockets', '~> 3.5', '>= 3.5.2'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'carrierwave',             '0.10.0'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'fog',                     '1.36.0'
+gem 'image_processing'
 group :development, :test do
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
